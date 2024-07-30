@@ -70,4 +70,4 @@ jobs:
           # Default: "fbca04"
           label_color: 'ff69b4'
 
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REPOLINTER_AUTO_TOKEN }}
