@@ -69,3 +69,5 @@ jobs:
           #
           # Default: "fbca04"
           label_color: 'ff69b4'
+
+          token: ${{ secrets.GITHUB_TOKEN }}
