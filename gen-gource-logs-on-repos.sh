@@ -42,12 +42,6 @@ while true; do
         sed -i -r -E "s#(.+)\|#\1|/$repo#" "$GOURCE_LOG_LOC/pecos_${repo}.log"
 
     done
-
-    
-
-    #cd $name
-    #scc > "/Users/murt/Repos/repodive-pecos/scc_reports/pecos_${name}.log" 
-    #cd ..
     
     # Increment page number for the next iteration
     page=$((page + 1))

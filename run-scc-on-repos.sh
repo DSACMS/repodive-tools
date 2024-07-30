@@ -41,12 +41,6 @@ while true; do
         cd ..
 
     done
-
-    
-
-    #cd $name
-    #scc > "/Users/murt/Repos/repodive-pecos/scc_reports/pecos_${name}.log" 
-    #cd ..
     
     # Increment page number for the next iteration
     page=$((page + 1))

@@ -1,6 +1,6 @@
 <!--- # NOTE: Modify sections marked with `TODO` -->
 
-<!--
+
 # How to Contribute
 
 We're so thankful you're considering contributing to an [open source project of
@@ -11,19 +11,19 @@ contributions.
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
 [LICENSE](LICENSE.md), and its [README](README.md).
--->
 
 ## Getting Started
 
-<!--- TODO: If you have 'good-first-issue' or 'easy' labels for newcomers, mention them here.-->
+For instructions on how to invoke the script, see the usage section of the [README](README.md)
 
-### Building dependencies
+### Installing dependencies
 
-<!--- TODO: This step is often skipped, so don't forget to include the steps needed to install on your platform. If you project can be multi-platform, this is an excellent place for first time contributors to send patches!-->
+First, install the dependencies that are required for these scripts:
 
-### Building the Project
-
-<!--- TODO: Be sure to include build scripts and instructions, not just the source code itself! -->
+ - [SCC](https://github.com/boyter/scc)
+ - [Gource](https://github.com/acaudwell/Gource)
+ - git
+ - curl
 
 <!--
 ### Workflow and Branching
