@@ -15,14 +15,18 @@ names = ["Brandon Yee", "Ricardo Zamora","CreativeNick"]
 with open(log_file, 'r') as f:
     log_lines = f.readlines()
 
-current_color = 0
+
 for line in log_lines:
     fields = line.split('|')
+    #print(fields[1])
     for name in names:
         if name in fields[1]:
             color = colors[1]
+            break
         else:
             color = colors[0]
-
+            break
+    
     new_line = line.strip() + f"|{color}"
-    print(new_line)
+    if color == colors[1] or (color == colors[0] and fields[2] != 'M'):
+        print(new_line)
