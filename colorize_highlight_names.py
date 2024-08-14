@@ -18,8 +18,8 @@ with open(log_file, 'r') as f:
 current_color = 0
 for line in log_lines:
     fields = line.split('|')
-    for name in fields[1]:
-        if name in line:
+    for name in names:
+        if name in fields[1]:
             color = colors[1]
         else:
             color = colors[0]
