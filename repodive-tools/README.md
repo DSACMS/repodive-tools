@@ -2,20 +2,19 @@
 Scripts and tools to gather information about git repositories.
 
 ## About the Project
-This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through 
-a git repository and gathering relevant information for a specific purpose. 
+**{project statement}**
 
 <!-- 
 ### Project Mission
 **{project mission}** -->
 
-
+<!-- 
 ### Agency Mission
-We're a group of civic-minded technologists transforming how the federal government delivers healthcare to the American people.
+TODO: Recommended to include since this is an agency-led project -->
 
-
+<!-- 
 ### Team Mission
-Establish and maintain guidance, policies, practices, and talent pipelines that advance equity, build trust, and amplify impact across CMS, HHS, and Federal Open Source Ecosystems by working and sharing openly.
+TODO: Recommended to include since this is an agency-led project -->
 
 ## Core Team
 
@@ -37,49 +36,17 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 **{list directories and descriptions}**
 -->
 
-## Development and Software Delivery Lifecycle
 <!--
-TODO
+# Development and Software Delivery Lifecycle
+The following guide is for members of the project team who have access to the repository as well as code contributors. The main difference between internal and external contributions is that external contributors will need to fork the project and will not be able to merge their own pull requests. For more information on contributing, see: [CONTRIBUTING.md](./CONTRIBUTING.md).
 -->
 
+<!--
 ## Local Development
-<!--
+
+TODO - with example below:
+This project is monorepo with several apps. Please see the [api](./api/README.md) and [frontend](./frontend/README.md) READMEs for information on spinning up those projects locally. Also see the project [documentation](./documentation) for more info.
 -->
-
-
-## Usage
-
-Run SCC on repos:
-
-    1. Make sure that scc is installed on your machine
-    2. Set valid environment variables including GitHub token
-    3. `./run-scc-on-repos.sh <Directory to store GitHub code>`
-
-Note: The SCC script will clone the repositories in the directory that you specify. If the 
-repository already exists in the directory then it will not download it again. This is useful 
-for if you want to re-use this directory to run the other scripts on it. 
-
-Gen Gource logs on repos:
-
-    1. Make sure that gource is installed on your machine
-    2. Set valid environment variables including GitHub token
-    3. `./gen-gource-logs-on-repos.sh <Directory to store GitHub code`
-
-Note: The gource script will clone the repositories in the directory that you specify. If the 
-repository already exists in the directory then it will not download it again. This is useful 
-for if you want to re-use this directory to run the other scripts on it. 
-
-
-Run contributor resolution (rough):
-
-    1. `./run-contrib-resolution.sh <Directory with the GitHub Code already there>`
-    3. Enter ctrl+d for any empty records that appear
-    4. `./concat.sh`
-    5. Look at merged_output.txt and enjoy!
-
-
-Note: this script assumes that all of the repositories have been cloned already.
-
 
 <!--
 ## Coding Style and Linters
@@ -150,13 +117,17 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Unfortunately, we cannot accept secure submissions via
-email or via GitHub Issues. Please use our website to submit vulnerabilities at
-[https://hhs.responsibledisclosure.com](https://hhs.responsibledisclosure.com).
-HHS maintains an acknowledgements page to recognize your efforts on behalf of
-the American public, but you are also welcome to submit anonymously.
+*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
+
+### Software Bill of Materials (SBOM)
+
+A Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software. 
+
+In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/DSACMS/repodive-tools/network/dependencies.
+
+For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom.
 
 ## Public domain
 
