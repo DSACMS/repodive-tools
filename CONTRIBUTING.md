@@ -61,11 +61,11 @@ TODO: Code Style Guide
 
 1. Check for Existing Issues
     - Before opening a new issue, please check if a similar issue already exists. You can search through the [existing issues](https://github.com/DSACMS/repodive-tools/issues) to avoid duplicates.
-1. Choose the Correct Issue Type
+2. Choose the Correct Issue Type
     - Bug Report: For reporting bugs or unexpected behavior in the application.
     - Feature Request: To suggest new features or enhancements.
     - Question/Help: If you need help understanding a feature or resolving a problem.
-1. Provide Clear Details:
+3. Provide Clear Details:
     - Summary: A clear and concise title.
     - Description: Explain the problem or feature in detail, including any relevant context.
     - Steps to Reproduce: If you're reporting a bug, describe the steps someone can follow to reproduce the problem.
@@ -73,7 +73,7 @@ TODO: Code Style Guide
     - Actual Behavior: What actually happened?
     - Screenshots or Logs: Include any logs, error messages, or screenshots that can help diagnose the issue.
     - Environment: Mention the environment where the issue occurred (OS, Python version, dependencies).
-1. Labels and Templates
+4. Labels and Templates
     - If available, select the appropriate labels (e.g., bug, enhancement, help wanted).
 
 

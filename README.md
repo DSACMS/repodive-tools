@@ -38,13 +38,10 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 -->
 
 ## Development and Software Delivery Lifecycle
-<!--
-TODO
--->
+We follow GitHub Flow with protected branches and pull request reviews. Development includes automated code analysis, security scanning, and adherence to CMS Open Source Policy guidelines. See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## Local Development
-<!--
--->
+To run locally, please follow the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) under Buidling the Project and Building Dependencies.
 
 
 ## Usage
