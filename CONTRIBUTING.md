@@ -12,24 +12,22 @@ contributions.
 We encourage you to read this project's CONTRIBUTING policy (you are here), its
 [LICENSE](LICENSE.md), and its [README](README.md).
 
-## Getting Started
-
-For instructions on how to invoke the script, see the usage section of the [README](README.md)
-
-### Installing dependencies
+# Getting Started
+## Building Dependencies
 
 First, install the dependencies that are required for these scripts:
 
  - [SCC](https://github.com/boyter/scc)
  - [Gource](https://github.com/acaudwell/Gource)
- - git
- - curl
+ - [Git Install here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ - [Curl](https://curl.se/docs/)
 
-<!--
+## Building the Project
+
+For instructions on how to invoke the script, see the usage section of the [README](README.md)
+
 ### Workflow and Branching
 
-<!---
-TODO: Workflow Example
 We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow/)
 
 1.  Fork the project 
@@ -40,7 +38,6 @@ We follow the [GitHub Flow Workflow](https://guides.github.com/introduction/flow
 6.  Work with repo maintainers to get your change reviewed 
 7.  Wait for your change to be pulled into `DSACMS/repodive-tools/main`
 8.  Delete your feature branch
--->
 
 <!-- 
 ### Testing Conventions
@@ -60,6 +57,24 @@ TODO: Code Style Guide
 -->
 
 ### Issues
+
+1. Check for Existing Issues
+    - Before opening a new issue, please check if a similar issue already exists. You can search through the [existing issues](https://github.com/DSACMS/repodive-tools/issues) to avoid duplicates.
+2. Choose the Correct Issue Type
+    - Bug Report: For reporting bugs or unexpected behavior in the application.
+    - Feature Request: To suggest new features or enhancements.
+    - Question/Help: If you need help understanding a feature or resolving a problem.
+3. Provide Clear Details:
+    - Summary: A clear and concise title.
+    - Description: Explain the problem or feature in detail, including any relevant context.
+    - Steps to Reproduce: If you're reporting a bug, describe the steps someone can follow to reproduce the problem.
+    - Expected Behavior: What did you expect to happen?
+    - Actual Behavior: What actually happened?
+    - Screenshots or Logs: Include any logs, error messages, or screenshots that can help diagnose the issue.
+    - Environment: Mention the environment where the issue occurred (OS, Python version, dependencies).
+4. Labels and Templates
+    - If available, select the appropriate labels (e.g., bug, enhancement, help wanted).
+
 
 <!---
 TODO: Example Issue Guides
@@ -102,11 +117,7 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Unfortunately, we cannot accept secure submissions via
-email or via GitHub Issues. Please use our website to submit vulnerabilities at
-[https://hhs.responsibledisclosure.com](https://hhs.responsibledisclosure.com).
-HHS maintains an acknowledgements page to recognize your efforts on behalf of
-the American public, but you are also welcome to submit anonymously.
+*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
 

@@ -9,17 +9,17 @@ a git repository and gathering relevant information for a specific purpose.
 ### Project Mission
 **{project mission}** -->
 
-<!-- 
-### Agency Mission
-TODO: Recommended to include since this is an agency-led project -->
 
-<!-- 
+### Agency Mission
+We're a group of civic-minded technologists transforming how the federal government delivers healthcare to the American people.
+
+
 ### Team Mission
-TODO: Recommended to include since this is an agency-led project -->
+Establish and maintain guidance, policies, practices, and talent pipelines that advance equity, build trust, and amplify impact across CMS, HHS, and Federal Open Source Ecosystems by working and sharing openly.
 
 ## Core Team
 
-A full list of contributors can be found on [https://github.cms.gov/DSACMS/repodive-tools/graphs/contributors](https://github.cms.gov/DSACMS/repodive-tools/graphs/contributors).
+A full list of contributors can be found on [https://github.com/DSACMS/repodive-tools/graphs/contributors](https://github.cms.gov/DSACMS/repodive-tools/graphs/contributors).
 
 <!--
 ## Documentation Index
@@ -36,6 +36,12 @@ TODO: Using the "tree -d" command can be a helpful way to generate this informat
 
 **{list directories and descriptions}**
 -->
+
+## Development and Software Delivery Lifecycle
+We follow GitHub Flow with protected branches and pull request reviews. Development includes automated code analysis, security scanning, and adherence to CMS Open Source Policy guidelines. See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+## Local Development
+To run locally, please follow the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) under Buidling the Project and Building Dependencies.
 
 
 ## Usage
@@ -141,13 +147,17 @@ questions, just [shoot us an email](mailto:opensource@cms.hhs.gov).
 
 ### Security and Responsible Disclosure Policy
 
-*Submit a vulnerability:* Unfortunately, we cannot accept secure submissions via
-email or via GitHub Issues. Please use our website to submit vulnerabilities at
-[https://hhs.responsibledisclosure.com](https://hhs.responsibledisclosure.com).
-HHS maintains an acknowledgements page to recognize your efforts on behalf of
-the American public, but you are also welcome to submit anonymously.
+*Submit a vulnerability:* Vulnerability reports can be submitted through [Bugcrowd](https://bugcrowd.com/cms-vdp). Reports may be submitted anonymously. If you share contact information, we will acknowledge receipt of your report within 3 business days.
 
 For more information about our Security, Vulnerability, and Responsible Disclosure Policies, see [SECURITY.md](SECURITY.md).
+
+### Software Bill of Materials (SBOM)
+
+A Software Bill of Materials (SBOM) is a formal record containing the details and supply chain relationships of various components used in building software. 
+
+In the spirit of [Executive Order 14028 - Improving the Nation’s Cyber Security](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028), a SBOM for this repository is provided here: https://github.com/{{ cookiecutter.project_org }}/{{ cookiecutter.project_repo_name }}/network/dependencies.
+
+For more information and resources about SBOMs, visit: https://www.cisa.gov/sbom.
 
 ## Public domain
 
