@@ -3,7 +3,7 @@
 # Variables
 GITHUB_API_URL="https://api.github.com"
 ORGANIZATION="CMSGov"
-TOKEN=""  # Replace with your GitHub token
+TOKEN=$GITHUB_TOKEN  # Set your environment variable to your GitHub Token
 
 # Function to fetch repositories from the organization
 fetch_repositories() {

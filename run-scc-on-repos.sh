@@ -3,7 +3,7 @@
 # Variables
 GITHUB_API_URL="https://github.cms.gov/api/v3"
 ORGANIZATION="pecos-application-development"
-TOKEN=""  # Replace with your GitHub token
+TOKEN=$GITHUB_TOKEN  # Set your environment variable to your GitHub Token
 SCC_LOG_LOC=$(readlink -f ./scc_reports)
 
 

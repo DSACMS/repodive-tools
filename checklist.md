@@ -96,10 +96,6 @@ As part of the code review, engineers should reference modern listings of the mo
    - Cross-Site Scripting (XSS) - Application does not have a web based user interface or form for user input.
    - Insecure Deserialization - Application does not perform deserialization of external or user provided data. </b>
 
-   - The scripts (gen-gource-logs-on-repos.sh and run-scc-on-repos.sh) contain hardcoded empty TOKEN variables. These should be moved to environment variables or a different secure system
-   - There is minimal error handling within the script files (concat.sh and run-contrib-resolution-rough.sh) pertaining to file system operations
-   - There is minimal error handling within the API cals made to the GitHub API
-
 
 ### Code Analysis 
 

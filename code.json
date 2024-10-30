@@ -6,7 +6,7 @@
       "longDescription": "This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose."
     }
   },
-  "status": "archival",
+  "status": "production",
   "permissions": {
     "licenses": [
       {
@@ -23,11 +23,11 @@
     "mac"
   ],
   "categories": [
-    "data-collection, data-analytics"
+    "data-collection,data-analytics"
   ],
   "softwareType": "standalone/backend",
   "languages": [
-    "bash, python"
+    "bash,python"
   ],
   "maintenance": "internal",
   "date": {
@@ -36,7 +36,7 @@
     "metadataLastUpdated": "2024-10-22T22:00:58+0000"
   },
   "tags": [
-    "git, repository, scripts, repodiving"
+    "git,repository,scripts,repodiving"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
