@@ -55,7 +55,7 @@
       }
     },
     "maintainers-file-exists": {
-      "level": "off",
+      "level": "error",
       "rule": {
         "type": "file-existence",
         "options": {
@@ -669,7 +669,7 @@
       }
     },
     "maintainers-contains-maintainers": {
-      "level": "off",
+      "level": "error",
       "rule": {
         "type": "file-contents",
         "options": {
@@ -682,7 +682,7 @@
       }
     },
     "maintainers-contains-maintainers-list": {
-      "level": "off",
+      "level": "error",
       "rule": {
         "type": "file-contents",
         "options": {
