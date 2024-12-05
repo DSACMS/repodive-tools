@@ -669,7 +669,7 @@
       }
     },
     "maintainers-contains-maintainers": {
-      "level": "error",
+      "level": "off",
       "rule": {
         "type": "file-contents",
         "options": {
@@ -695,7 +695,7 @@
       }
     },
     "maintainers-contains-approvers-list": {
-      "level": "off",
+      "level": "error",
       "rule": {
         "type": "file-contents",
         "options": {
@@ -708,7 +708,7 @@
       }
     },
     "maintainers-contains-reviewers-list": {
-      "level": "off",
+      "level": "error",
       "rule": {
         "type": "file-contents",
         "options": {
