@@ -1,0 +1,21 @@
+name: 'Create a PR based on validation'
+
+on: 
+    workflow_dispatch: {} 
+
+jobs:
+  repolinter-action:
+    runs-on: ubuntu-latest
+    name: Run Repolinter
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: 'Run Repolinter'
+        uses: DSACMS/repolinter-actions@main 
+        with:
+          output_type: 'pull-request'
+          token: ${{ secrets.REPOLINTER_AUTO_TOKEN}}
+          # The PAT needs full `repo` scope
