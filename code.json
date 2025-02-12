@@ -39,14 +39,13 @@
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Program Office"
   },
-  "localisation": "false",
-  "repositoryType": "",
-  "userInput": "Yes",
+  "localisation": false,
+  "repositoryType": "Tools",
+  "userInput": true,
   "fismaLevel": "Low",
-  "group": "DSAC",
+  "group": "CMS/OA/DSAC",
   "subsetInHealthcare": "Operational",
   "userType": "Government",
-  "repositoryHost": "Github.com",
+  "repositoryHost": "github.com/DSACMS",
   "maturityModelTier": 1,
-  "repoType": "Tools"
 }
