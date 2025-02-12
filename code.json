@@ -1,7 +1,7 @@
 {
   "name": "repodive-tools",
   "description": "Scripts and tools to gather information about git repositories.",
-  "longDescription": "",
+  "longDescription": ""This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose."",
   "status": "production",
   "permissions": {
     "licenses": [
@@ -19,7 +19,7 @@
     "mac"
   ],
   "categories": [
-    "data-collection,data-analytics"
+    "data-collection","data-analytics"
   ],
   "softwareType": "standalone/backend",
   "languages": [
@@ -33,7 +33,7 @@
     "metaDataLastUpdated": "2025-02-12T18:21:43.233Z"
   },
   "tags": [
-    "git,repository,scripts,repodiving"
+    "git","repository","scripts","repodiving""
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -47,6 +47,6 @@
   "subsetInHealthcare": "Operational",
   "userType": "Government",
   "repositoryHost": "Github.com",
-  "maturityModelTier": "1",
+  "maturityModelTier": 1,
   "repoType": "Tools"
 }
