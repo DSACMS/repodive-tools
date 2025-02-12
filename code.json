@@ -1,11 +1,7 @@
 {
   "name": "repodive-tools",
-  "description": {
-    "en": {
-      "shortDescription": "Scripts and tools to gather information about git repositories.",
-      "longDescription": "This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose."
-    }
-  },
+  "description": "Scripts and tools to gather information about git repositories.",
+  "longDescription": "",
   "status": "production",
   "permissions": {
     "licenses": [
@@ -18,7 +14,7 @@
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repodive-tools",
   "vcs": "git",
-  "laborHours": null,
+  "laborHours": 3097,
   "platforms": [
     "mac"
   ],
@@ -27,13 +23,14 @@
   ],
   "softwareType": "standalone/backend",
   "languages": [
-    "bash,python"
+    "Shell",
+    "Python"
   ],
   "maintenance": "internal",
   "date": {
-    "created": "2024-07-30T11:54:17-05:00",
-    "lastModified": "2024-10-22T22:00:58+0000",
-    "metadataLastUpdated": "2024-10-22T22:00:58+0000"
+    "created": "2024-07-30T16:54:18Z",
+    "lastModified": "2025-02-12T18:20:52Z",
+    "metaDataLastUpdated": "2025-02-12T18:21:43.233Z"
   },
   "tags": [
     "git,repository,scripts,repodiving"
@@ -43,12 +40,13 @@
     "name": "CMS Open Source Program Office"
   },
   "localisation": "false",
-  "repoType": "Tools",
+  "repositoryType": "",
   "userInput": "Yes",
   "fismaLevel": "Low",
   "group": "DSAC",
   "subsetInHealthcare": "Operational",
   "userType": "Government",
   "repositoryHost": "Github.com",
-  "maturityModelTier": "1"
+  "maturityModelTier": "1",
+  "repoType": "Tools"
 }
