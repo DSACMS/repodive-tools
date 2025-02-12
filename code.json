@@ -1,7 +1,7 @@
 {
   "name": "repodive-tools",
   "description": "Scripts and tools to gather information about git repositories.",
-  "longDescription": ""This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose."",
+  "longDescription": "This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose.",
   "status": "production",
   "permissions": {
     "licenses": [
