@@ -77,6 +77,26 @@ Run contributor resolution (rough):
 
 Note: this script assumes that all of the repositories have been cloned already.
 
+### Using GitHub's Search Function to Find Project Dependants
+
+A useful feature of GitHub is the search feature that you can find [here](https://github.com/search).
+
+Using the search feature you can search projects that your GitHub account has permission to view and filter the results to your liking.
+
+For example, you can search GitHub for projects that have a specific project as a dependency. This is known as searching for a project's dependants. This is done by
+using the `path:` keyword in order to filter the results that have a specific file in the results. Therefore, if you add the parameter `path:package.json` to your search
+you will search GitHub for Javascript project dependency files and you can search for projects that have a specific Javascript dependency this way. 
+
+Here is an example of searching GitHub for projects that use the package `@trussworks/react-uswds`:
+
+https://github.com/search?q=%40trussworks%2Freact-uswds+path%3Apackage.json+NOT+is%3Afork&type=code
+
+You might also notice that there are some parameters added such as the parameter `NOT is:fork` which excludes projects that are a fork of other projects. You can 
+also do additional parameters to further filter the results by categories such as org. To filter by organization you can add `org:DSACMS` [in order to only show
+projects that belong to that organization](https://github.com/search?q=%40trussworks%2Freact-uswds+path%3Apackage.json++org%3Adsacms+NOT+is%3Afork&type=code).
+
+To read more about the GitHub search feature from GitHub's official documentation you can get to that [here](https://docs.github.com/en/search-github/getting-started-with-searching-on-github/about-searching-on-github)
+
 
 <!--
 ## Coding Style and Linters
