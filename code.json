@@ -3,14 +3,15 @@
   "version": "",
   "description": "Scripts and tools to gather information about git repositories.",
   "longDescription": "This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose.",
-  "status": "production",
+  "status": "Production",
   "permissions": {
     "licenses": [
       {
-        "URL": "LICENSE",
-        "name": "CC0-1.0"
+        "name": "CC0-1.0",
+        "URL": "https://github.com/dsacms/repodive-tools/blob/main/LICENSE"
       }
-    ]
+    ],
+    "usageType": ["openSource"]
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repodive-tools",
@@ -60,13 +61,17 @@
   "feedbackMechanism": "https://github.com/DSACMS/repodive-tools/issues",
   "AIUseCaseID": "0",
   "localisation": false,
-  "repositoryType": "Tools",
+  "repositoryType": "tools",
   "userInput": true,
-  "fismaLevel": "Low",
+  "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
   "projects": [],
   "systems": [],
-  "subsetInHealthcare": "Operational",
-  "userType": "Government",
+  "subsetInHealthcare": [
+    "operational"
+  ],
+  "userType": [
+    "government"
+  ],
   "maturityModelTier": 1
 }
