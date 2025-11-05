@@ -1,25 +1,39 @@
 {
   "name": "repodive-tools",
+  "version": "",
   "description": "Scripts and tools to gather information about git repositories.",
   "longDescription": "This repository is a collection of scripts and tools for a given repodiving effort. Repodiving in this context means going through a git repository and gathering relevant information for a specific purpose.",
-  "status": "production",
+  "status": "Production",
   "permissions": {
     "licenses": [
       {
-        "URL": "LICENSE",
-        "name": "CC0-1.0"
+        "name": "CC0-1.0",
+        "URL": "https://github.com/dsacms/repodive-tools/blob/main/LICENSE"
       }
-    ]
+    ],
+    "usageType": ["openSource"],
+    "exemptionText": ""
   },
   "organization": "Centers for Medicare & Medicaid Services",
   "repositoryURL": "https://github.com/DSACMS/repodive-tools",
+  "repositoryHost": "github.com/DSACMS",
+  "repositoryVisibility": "public",
+  "homepageURL": "",
+  "downloadURL": "",
+  "disclaimerURL": "",
+  "disclaimerText": "",
   "vcs": "git",
-  "laborHours": 3097,
+  "laborHours": 3104,
+  "reuseFrequency": {
+    "forks": 0,
+    "clones": 0
+  },
   "platforms": [
     "mac"
   ],
   "categories": [
-    "data-collection","data-analytics"
+    "data-collection",
+    "data-analytics"
   ],
   "softwareType": "standalone/backend",
   "languages": [
@@ -27,25 +41,38 @@
     "Python"
   ],
   "maintenance": "internal",
+  "contractNumber": [],
+  "SBOM": "https://github.com/DSACMS/repodive-tools/network/dependencies",
+  "relatedCode": [],
+  "reusedCode": [],
+  "partners": [],
   "date": {
     "created": "2024-07-30T16:54:18Z",
-    "lastModified": "2025-02-12T18:20:52Z",
-    "metaDataLastUpdated": "2025-02-12T18:21:43.233Z"
+    "lastModified": "2025-11-04T23:27:37Z",
+    "metadataLastUpdated": "2025-11-05T22:32:42.025Z"
   },
   "tags": [
-    "git","repository","scripts","repodiving"
+    "cms-oss-tier1",
+    "dsacms-tier1"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
     "name": "CMS Open Source Program Office"
   },
+  "feedbackMechanism": "https://github.com/DSACMS/repodive-tools/issues",
+  "AIUseCaseID": "0",
   "localisation": false,
-  "repositoryType": "Tools",
+  "repositoryType": "tools",
   "userInput": true,
-  "fismaLevel": "Low",
+  "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "subsetInHealthcare": "Operational",
-  "userType": "Government",
-  "repositoryHost": "github.com/DSACMS",
+  "projects": [],
+  "systems": [],
+  "subsetInHealthcare": [
+    "operational"
+  ],
+  "userType": [
+    "government"
+  ],
   "maturityModelTier": 1
 }
