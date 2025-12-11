@@ -55,7 +55,13 @@
   },
   "tags": [
     "cms-oss-tier1",
-    "dsacms-tier1"
+    "dsacms-tier1",
+    "scc",
+    "gource",
+    "github",
+    "featured",
+    "repository",
+    "assessment"
   ],
   "contact": {
     "email": "opensource@cms.hhs.gov",
@@ -68,7 +74,7 @@
   "userInput": true,
   "fismaLevel": "low",
   "group": "CMS/OA/DSAC",
-  "projects": [],
+  "projects": ["ospo"],
   "systems": [],
   "subsetInHealthcare": [
     "operational"
