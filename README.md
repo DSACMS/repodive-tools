@@ -44,38 +44,87 @@ We follow GitHub Flow with protected branches and pull request reviews. Developm
 To run locally, please follow the instructions in [CONTRIBUTING.md](CONTRIBUTING.md) under Buidling the Project and Building Dependencies.
 
 
-## Usage
+## Scripts Available
+<!-- 1st Script -->
+### Run SCC on repos
+**Script:** run-scc-on-repos.sh
 
-Run SCC on repos:
+#### Overview
 
-    1. Make sure that scc is installed on your machine
-    2. Set valid environment variables including GitHub token
-    3. `./run-scc-on-repos.sh <Directory to store GitHub code>`
+This script automates running **scc** across every repository in a GitHub organization. Instead of manually cloning each repository and executing **scc** one at a time, the script retrieves every repository through the GitHub API, clones any that are not already available locally, runs **scc** on each repository, and saves the resulting metrics as JSON reports for later analysis.
 
-Note: The SCC script will clone the repositories in the directory that you specify. If the 
-repository already exists in the directory then it will not download it again. This is useful 
-for if you want to re-use this directory to run the other scripts on it. 
+#### Prerequisites:
+- Access to the configured GitHub Enterprise organization.
+- A valid GitHub Enterprise Personal Access Token.
+- Required dependencies **git, curl, jq, scc**.
 
-Gen Gource logs on repos:
+#### Usage
+1. Install all required dependencies
+2. Set the required environment variables, including `GITHUB_TOKEN`
+3. **./run-scc-on-repos.sh \<Directory to store GitHub code>**
 
-    1. Make sure that gource is installed on your machine
-    2. Set valid environment variables including GitHub token
-    3. `./gen-gource-logs-on-repos.sh <Directory to store GitHub code`
+#### Notes
+- The SCC script clones repositories into the directory you specify.
+- If the repository already exists in that directory, it will not be cloned again.
+- Existing local clones can be reused when running other repodive scripts.
+- SCC reports are generated as JSON files and stored in the `scc_reports` directory.
 
-Note: The gource script will clone the repositories in the directory that you specify. If the 
-repository already exists in the directory then it will not download it again. This is useful 
-for if you want to re-use this directory to run the other scripts on it. 
+<!-- 2nd Script -->
+### Gen Gource logs on Repositories
+**Script:** gen-gource-logs-on-repos.sh
 
+#### Overview
 
-Run contributor resolution (rough):
+This script retrieves repositories from the configured GitHub organization, clones or updates them locally, generates a Gource custom log for each repository, and formats the logs so they can be combined into a single visualization of repository activity.
 
-    1. `./run-contrib-resolution.sh <Directory with the GitHub Code already there>`
-    3. Enter ctrl+d for any empty records that appear
-    4. `./concat.sh`
-    5. Look at merged_output.txt and enjoy!
+- The generated log files contain timestamped repository events (such as file additions, modifications, and deletions) that can later be combined and used by Gource to generate repository activity visualizations.
 
+#### Prerequisites:
+- Access to the configured GitHub organization.
+- A valid GitHub Personal Access Token.
+- Required dependencies **git, curl, jq, gource**.
 
-Note: this script assumes that all of the repositories have been cloned already.
+#### Usage
+1. Install all required dependencies
+2. Set the required environment variables, including `GITHUB_TOKEN`
+3. **./gen-gource-logs-on-repos.sh \<Directory to store GitHub code>**
+
+#### Notes
+- The gource script clones repositories into the directory you specify. If the repository already exists in that directory, it will not be cloned again. This is useful for if you want to re-use this directory to run the other scripts on it. 
+- The script also makes sure to get the latest version of the local clone using **git pull**.
+- Existing local clones can be reused when running other repodive scripts.
+- Gource log files are generated for each repository and stored in the **gource_logs** directory.
+- Each generated log is formatted so it can be combined with logs from other repositories for organization-wide visualizations.
+
+<!-- 3rd Script -->
+### Generate a Combined Contributor Breakdown 
+**Scripts:** run-contrib-resolution.sh, concat.sh
+
+#### Overview
+The first script generates a contributor report for each cloned Git repository using **git shortlog**. The second script combines those reports, adds together commit counts for matching contributor names and email addresses, and produces a sorted contributor breakdown across all repositories.
+
+- This script assumes that all of the repositories have been cloned already.
+
+#### Prerequisites:
+- All target repositories must already be cloned into one directory.
+- Required dependencies **git**.
+- Required shell utilities, including **awk**, **cat**, **sort**, and **mktemp**, must be available.
+
+#### Usage
+1. Install all required dependencies
+2. **./run-contrib-resolution.sh \<Directory with the GitHub Code already there>**
+3. **Enter ctrl+d for any empty records that appear**
+4. **./concat.sh**
+5. Look at merged_output.txt and enjoy!
+
+#### Notes
+- run-contrib-resolution.sh saves one contributor report per repository in the shortlog_reports directory.
+- Contributor identities are grouped by their exact name and email combination.
+- merged_output.txt contains the combined contributor totals.
+- shortlog-breakdown.txt contains the same totals sorted from highest to lowest.
+
+<!-- Additional-->
+## Additional Repository Analysis Techniques
 
 ### Using GitHub's Search Function to Find Project Dependants
 
