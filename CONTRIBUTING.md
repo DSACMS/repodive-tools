@@ -17,14 +17,29 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its
 
 First, install the dependencies that are required for these scripts:
 
- - [SCC](https://github.com/boyter/scc)
- - [Gource](https://github.com/acaudwell/Gource)
- - [Git Install here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
- - [Curl](https://curl.se/docs/)
+[Install scc](https://github.com/boyter/scc)
+
+`scc` is a command-line tool that analyzes a repository and reports code metrics such as lines of code, comments, and language breakdowns. 
+
+[Install gource](https://github.com/acaudwell/Gource)
+
+`gource` is a visualization tool for Git repositories (and other version control systems). Instead of showing you statistics like scc, it animates the history of a repository, showing how the project evolved over time.
+
+[Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+`git` is a distributed version control system used to track changes, collaborate with others, and manage project history. It is required to clone repositories and contribute to development.
+
+[Install curl](https://everything.curl.dev/install/index.html)
+
+`curl` is a command-line tool for transferring data to and from servers using URLs. Developers commonly use it to download files, test APIs, and make HTTP requests from the terminal.
+
+[Install jq](https://jqlang.org/download/)
+
+`jq` is a command-line JSON processor. The repodive scripts use it to parse GitHub API responses and extract repository names and clone URLs.
 
 ## Building the Project
 
-For instructions on how to invoke the script, see the usage section of the [README](README.md)
+For instructions on how to invoke the script, see the Scripts Available section of the [README](README.md)
 
 ### Workflow and Branching
 
