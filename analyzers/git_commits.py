@@ -46,7 +46,6 @@ from config import (
     average,
 )
 
-# Field separator unlikely to appear in commit data; NUL (\x00) separates commits.
 FIELD_SEP = "\x1f"
 COMMIT_SEP = "\x1e"
 
@@ -98,7 +97,6 @@ def fetch_commit_log(repo_path: str) -> list[dict]:
     )
 
     commits = []
-    # Split on our commit separator; first chunk before any separator is empty.
     chunks = raw.split(COMMIT_SEP)
     for chunk in chunks:
         chunk = chunk.strip("\n")
@@ -109,7 +107,7 @@ def fetch_commit_log(repo_path: str) -> list[dict]:
         header = lines[0]
         parts = header.split(FIELD_SEP)
         if len(parts) != 4:
-            continue  # malformed header, skip defensively
+            continue 
         commit_hash, author_name, author_email, date_iso = parts
 
         insertions = 0
@@ -119,7 +117,6 @@ def fetch_commit_log(repo_path: str) -> list[dict]:
             stat_line = stat_line.strip()
             if not stat_line:
                 continue
-            # numstat format: "<added>\t<removed>\t<path>" — binary files show "-"
             stat_parts = stat_line.split("\t")
             if len(stat_parts) < 3:
                 continue
@@ -149,7 +146,7 @@ def compute_monthly_distribution(commits: list[dict]) -> list[dict]:
     """Returns commit counts per calendar month, sorted chronologically."""
     monthly = defaultdict(int)
     for c in commits:
-        month = c["date"][:7]  # "YYYY-MM"
+        month = c["date"][:7]
         monthly[month] += 1
     return [{"month": m, "commits": n} for m, n in sorted(monthly.items())]
 
@@ -305,7 +302,7 @@ def analyze(repo_path: str) -> dict:
         "monthly_distribution": monthly,
         "activity_spikes": spikes,
         "bus_factor": bus_factor,
-        "contributors": contributors[:25],  # cap for report readability
+        "contributors": contributors[:25],
         "activity_consistency": consistency,
     }
 

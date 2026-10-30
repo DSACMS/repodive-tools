@@ -67,20 +67,14 @@ from config import (
     add_output_arg,
 )
 
-# Known AI coding agent / bot account patterns that show up as literal
-# PR or commit authors. This is the HIGH confidence signal — if this
-# account authored the work, that tool was used, full stop.
 KNOWN_AI_BOT_LOGINS = [
-    "app/copilot-swe-agent",   # GitHub Copilot coding agent
+    "app/copilot-swe-agent",
     "app/copilot",
     "app/cursor",
     "app/devin-ai-integration",
     "app/sweep-ai",
 ]
 
-# Co-authored-by trailer patterns for tools known to auto-insert this
-# trailer into commits. MEDIUM-HIGH confidence: tool-inserted, not
-# developer-written prose, but still removable/editable by the author.
 COAUTHOR_AI_PATTERNS = [
     (re.compile(r"co-authored-by:\s*claude", re.IGNORECASE), "Claude Code"),
     (re.compile(r"co-authored-by:\s*.*copilot", re.IGNORECASE), "GitHub Copilot"),
@@ -89,21 +83,17 @@ COAUTHOR_AI_PATTERNS = [
     (re.compile(r"co-authored-by:\s*.*codeium", re.IGNORECASE), "Codeium"),
 ]
 
-# Free-text keyword mentions. LOW confidence — these are reported
-# separately and labeled as weak signals, never conflated with 1-2 above.
 FREE_TEXT_AI_PATTERNS = [
     (re.compile(r"\bgenerated (with|by|using)\b.*\b(ai|gpt|claude|copilot|llm)\b", re.IGNORECASE), "generic AI-generated phrasing"),
     (re.compile(r"\bchatgpt\b", re.IGNORECASE), "ChatGPT mention"),
     (re.compile(r"\bclaude\b", re.IGNORECASE), "Claude mention"),
     (re.compile(r"\bcopilot\b", re.IGNORECASE), "Copilot mention"),
     (re.compile(r"\bcursor\b", re.IGNORECASE), "Cursor mention"),
-    (re.compile(r"\bgithub actions? bot\b", re.IGNORECASE), None),  # explicitly excluded, see note below
+    (re.compile(r"\bgithub actions? bot\b", re.IGNORECASE), None),
 ]
 
-# Patterns that look like AI mentions but are common false-positive
-# sources — excluded from free-text matching rather than counted.
 FREE_TEXT_EXCLUDE_IF_MATCHES = [
-    re.compile(r"\bcursor\b.*\b(css|pointer|mouse)\b", re.IGNORECASE),  # "cursor: pointer" CSS, not the AI tool
+    re.compile(r"\bcursor\b.*\b(css|pointer|mouse)\b", re.IGNORECASE),
 ]
 
 

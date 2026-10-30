@@ -76,10 +76,7 @@ COCOMO_MODES = {
     "embedded": {"a": 3.6, "b": 1.20, "c": 2.5, "d": 0.32},
 }
 
-# Average fully-loaded monthly cost per engineer, used to turn effort
-# (person-months) into a dollar estimate. This is a labeled assumption,
-# not a benchmark — override via --avg-monthly-cost if your org has a
-# better blended rate (salary + overhead) to plug in.
+
 DEFAULT_AVG_MONTHLY_COST_USD = 16_000
 
 
@@ -89,12 +86,8 @@ DEFAULT_AVG_MONTHLY_COST_USD = 16_000
 
 DEFAULT_TOKENS_PER_LINE = 10
 DEFAULT_REVIEW_LOC_PER_HOUR = 300
-DEFAULT_REVIEWER_HOURLY_RATE_USD = 85  # blended senior-engineer hourly rate for review time cost
+DEFAULT_REVIEWER_HOURLY_RATE_USD = 85
 
-# Illustrative model tiers. These are deliberately generic ("Small/Medium/Large")
-# rather than named after specific real models, since pricing/speed shift
-# constantly — treat these as placeholders to calibrate against whatever
-# models your org actually plans to use.
 MODEL_TIERS = {
     "small": {
         "label": "LLM - Small",
@@ -112,7 +105,6 @@ MODEL_TIERS = {
         "tokens_per_second": 40,
     },
 }
-
 
 # ---------------------------------------------------------------------------
 # COCOMO

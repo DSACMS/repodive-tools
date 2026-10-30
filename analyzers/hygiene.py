@@ -47,11 +47,8 @@ from config import (
     add_output_arg,
 )
 
-# Minimum byte size below which a present file is flagged as "likely a stub".
 STUB_SIZE_THRESHOLD_BYTES = 50
 
-# Each entry: (display_name, [list of candidate relative paths to check, case-insensitive])
-# Order within the candidate list doesn't matter; first match found wins.
 DOCUMENTATION_CHECKS = [
     ("README.md", ["README.md", "README.rst", "README.txt", "README"]),
     ("CONTRIBUTING.md", ["CONTRIBUTING.md", ".github/CONTRIBUTING.md", "docs/CONTRIBUTING.md"]),
@@ -61,7 +58,7 @@ DOCUMENTATION_CHECKS = [
         ".github/ISSUE_TEMPLATE.md",
         [
             ".github/ISSUE_TEMPLATE.md",
-            ".github/ISSUE_TEMPLATE",  # directory form (multiple templates)
+            ".github/ISSUE_TEMPLATE",
             ".github/issue_template.md",
         ],
     ),
@@ -70,7 +67,7 @@ DOCUMENTATION_CHECKS = [
         [
             ".github/PULL_REQUEST_TEMPLATE.md",
             ".github/PR_TEMPLATE.md",
-            ".github/PULL_REQUEST_TEMPLATE",  # directory form
+            ".github/PULL_REQUEST_TEMPLATE",
         ],
     ),
     ("code.json", ["code.json"]),
@@ -78,10 +75,7 @@ DOCUMENTATION_CHECKS = [
     ("COMMUNITY.md", ["COMMUNITY.md", "COMMUNITY_GUIDELINES.md", ".github/COMMUNITY.md"]),
 ]
 
-# Checked separately since it's a "docs exist somewhere" question rather
-# than a single-file existence check.
 DOCKER_DOC_HINTS = ["docs/docker", "docs/deployment", "DOCKER.md", "docker-compose.yml", "Dockerfile"]
-
 
 def _find_first_match(repo: Path, candidates: list[str]) -> Path | None:
     """
@@ -90,14 +84,12 @@ def _find_first_match(repo: Path, candidates: list[str]) -> Path | None:
     git/GitHub are case-sensitive but conventions vary (Readme.md,
     README.MD, etc. all show up in the wild).
     """
-    # Build a lowercase lookup of all top-level and .github entries once,
-    # rather than re-walking the filesystem per candidate.
+
     for candidate in candidates:
         direct = repo / candidate
         if direct.exists():
             return direct
 
-    # Case-insensitive fallback: walk relevant directories and compare lowercase.
     search_dirs = {repo, repo / ".github", repo / "docs"}
     lowered_candidates = {c.lower(): c for c in candidates}
     for d in search_dirs:
@@ -141,7 +133,6 @@ def check_file_hygiene(repo_path: str) -> list[dict]:
             else:
                 notes = f"Present ({size:,} bytes)."
         else:
-            # directory form (e.g. .github/ISSUE_TEMPLATE/ with multiple templates)
             try:
                 count = len(list(match.iterdir()))
             except PermissionError:

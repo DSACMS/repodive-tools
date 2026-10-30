@@ -198,12 +198,10 @@ def analyze(github_repo: str) -> dict:
             }
         )
 
-    # Exclude drafts from cadence math (they aren't actually published) but
-    # keep them in the raw list for visibility.
+
     published = [r for r in enriched if not r["is_draft"] and r["published_at"]]
     published_sorted = sorted(published, key=lambda r: r["published_at"])
 
-    # classify version bump type release-over-release
     for i, r in enumerate(published_sorted):
         prev_semver = published_sorted[i - 1]["semver"] if i > 0 else None
         r["bump_type"] = classify_semver_bump(prev_semver, r["semver"])
@@ -232,7 +230,7 @@ def analyze(github_repo: str) -> dict:
         },
         "cadence": cadence,
         "version_bump_breakdown": bump_counts,
-        "releases": list(reversed(published_sorted)),  # newest-first for display
+        "releases": list(reversed(published_sorted)),
     }
 
 

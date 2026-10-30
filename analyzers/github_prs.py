@@ -30,8 +30,6 @@ from pathlib import Path
 
 import requests
 
-# Allow running this file directly (python analyzers/github_prs.py) as well
-# as importing it from orchestrator.py at the project root.
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from config import (
     github_auth_headers,
@@ -75,7 +73,6 @@ def _get_paginated(url: str, headers: dict, params: dict | None = None) -> list:
         for part in link_header.split(","):
             if 'rel="next"' in part:
                 next_url = part[part.find("<") + 1 : part.find(">")]
-        # be polite between pages
         time.sleep(0.1)
 
     return results
@@ -128,11 +125,9 @@ def analyze(github_repo: str, max_prs: int | None = None) -> dict:
     for i, pr in enumerate(raw_prs):
         login = (pr.get("user") or {}).get("login", "unknown")
         bot = is_bot(login, False)
-        additions = pr.get("additions")  # NOTE: list endpoint doesn't include additions/deletions
+        additions = pr.get("additions")
         deletions = pr.get("deletions")
 
-        # The /pulls list endpoint doesn't return additions/deletions or merged_at
-        # reliably for all cases, so fetch the single-PR endpoint for size + merge info.
         detail_resp = requests.get(
             f"{GITHUB_API}/repos/{github_repo}/pulls/{pr['number']}", headers=headers
         )

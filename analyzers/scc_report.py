@@ -196,9 +196,6 @@ def analyze(repo_path: str, exclude_dirs: list[str] | None = None) -> dict:
         "totals": totals,
         "languages": languages_with_pct,
         "complexity_hotspots": hotspots,
-        # Kept for cocomo_locomo.py to consume without re-running scc.
-        # scc's --cost-comparison / COCOMO math needs total code lines +
-        # a per-language breakdown, both of which are already here.
         "_raw_scc_output_available": True,
     }
 
